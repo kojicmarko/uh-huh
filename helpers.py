@@ -18,6 +18,7 @@ def lst_to_csv_str(list):
     for data in list:
         if not data:
             s += ','
+            continue
         else:
-            s += f'{str(data).strip()},'
+            s += f'{data},'
     return f'{s}\n'
