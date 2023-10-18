@@ -2,5 +2,6 @@
 __pycache__
 *.pyc
 test.py
-trka.csv
+test.csv
 test.db
+test.sql
