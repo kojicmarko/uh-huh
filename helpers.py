@@ -1,4 +1,5 @@
 import datetime
+from urllib.parse import urlparse
 
 
 def get_sec(time):
@@ -22,3 +23,14 @@ def lst_to_csv_str(list):
         else:
             s += f'{data},'
     return f'{s}\n'
+
+
+def get_table_name(url):
+    """Convert url to SQL table name"""
+    name = 'E'
+    for e in urlparse(url).path.split('/'):
+        if len(e) == 1:
+            name += e
+        if e.isnumeric():
+            name += e
+    return name
