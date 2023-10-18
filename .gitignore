@@ -1,7 +1,5 @@
 .venv
 __pycache__
 *.pyc
-test.py
-test.csv
 test.db
-test.sql
+test.py
