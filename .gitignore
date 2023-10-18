@@ -1,6 +1,5 @@
 .venv
 __pycache__
 *.pyc
-test.py
-trka.csv
 test.db
+test.py
