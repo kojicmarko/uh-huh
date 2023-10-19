@@ -1,5 +1,13 @@
 .venv
 __pycache__
 *.pyc
+__pycache__/
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
 test.db
 test.py

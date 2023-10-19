@@ -1,0 +1,8 @@
+{% extends 'form.html' %} {% block content %}
+<p>You are faster than {{numbers['faster_than']}}% of runners.</p>
+<p>Median finish time: {{numbers['median']}}</p>
+<p>Average finish time: {{numbers['average']}}</p>
+<p>First place finish time: {{numbers['first']}}</p>
+{%for time in numbers['deciles']%}
+<p>Top % {{time}}</p>
+{% endfor %} {% endblock %}

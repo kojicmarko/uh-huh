@@ -1,7 +1,7 @@
 import sys
 import requests
 from bs4 import BeautifulSoup
-from helpers import get_table_name, is_url, get_sec, get_time_str, is_time
+from uhhuh.functions import get_table_name, is_url, get_sec, get_time_str, is_time
 import sqlite3
 import numpy as np
 
