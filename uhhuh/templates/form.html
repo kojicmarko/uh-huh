@@ -1,10 +1,15 @@
 {% extends 'base.html' %}{% block form %}
 <form action="/uh-huh" method="POST">
-  <label>Your time:<input type="text" name="usr_time" value="0:29:33" /></label>
+  <label
+    >Time: <input type="text" name="usr_time" placeholder="0:30:00"
+  /></label>
   <label
     >URL:
-    <input type="text" name="url" value="https://trka.rs/results/696/gender/M/"
+    <input
+      type="url"
+      name="url"
+      placeholder="https://trka.rs/results/696/gender/M/"
   /></label>
-  <label><input type="submit" value="submit" /></label>
+  <label><input type="submit" value="Submit" /></label>
 </form>
 {% endblock %}

@@ -40,6 +40,10 @@ def uh_huh():
                 db.executemany(
                     "INSERT INTO runner(race_name,rank,number,first_name,last_name,club,country,chip_time,gun_time,status,remark) VALUES(?,?,?,?,?,?,?,?,?,?,?)", runners)
                 db.commit()
+                times = db.execute(
+                    "SELECT gun_time FROM runner JOIN race ON runner.race_name = race.race_name WHERE race.race_name = ? AND status IS 'OK'", (race_name,)).fetchall()
+                gun_times = [time[0] for time in times]
+                numbers_dict = crunch_the_numbers(gun_times, usr_time)
             else:
                 times = db.execute(
                     "SELECT gun_time FROM runner JOIN race ON runner.race_name = race.race_name WHERE race.race_name = ? AND status IS 'OK'", (race_name,)).fetchall()

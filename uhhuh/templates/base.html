@@ -11,7 +11,22 @@
   </head>
   <body>
     <h1>{% block header %}Uh-huh{% endblock %}</h1>
-    {% block form %}{% endblock %} {% for message in get_flashed_messages() %}
+    {% block legend %}
+    <div>
+      <p>Time format: H:MM:SS</p>
+      <p>
+        Get the race results URL from:
+        <a href="https://trka.rs/events/past/">trka.rs</a>
+      </p>
+      <p>
+        Example input: Time:0:30:00 URL:<a
+          href="https://trka.rs/results/696/gender/M/"
+          >https://trka.rs/results/696/gender/M/</a
+        >
+      </p>
+    </div>
+    {% endblock %} {% block form %}{% endblock %} {% for message in
+    get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
     {% endfor %}
     <section>{% block content %}{% endblock %}</section>

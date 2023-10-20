@@ -4,5 +4,5 @@
 <p>Average finish time: {{numbers['average']}}</p>
 <p>First place finish time: {{numbers['first']}}</p>
 {%for time in numbers['deciles']%}
-<p>Top % {{time}}</p>
+<p>Top {{time[0]}}% {{time[1]}}</p>
 {% endfor %} {% endblock %}

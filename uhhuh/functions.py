@@ -63,15 +63,16 @@ def crunch_the_numbers(gun_times, usr_time):
     times_below_usr_time = [
         time for time in gun_times if time < get_sec(usr_time)]
 
-    percentile_faster = round(100 -
-                              (len(times_below_usr_time) / len(gun_times) * 100), 2)
+    faster = round(100 -
+                   (len(times_below_usr_time) / len(gun_times) * 100), 2)
 
     numbers_dict = {}
-    numbers_dict['faster_than'] = percentile_faster
+    numbers_dict['faster_than'] = faster
     numbers_dict['median'] = get_time_str(np.median(gun_times))
     numbers_dict['average'] = get_time_str(np.mean(gun_times))
     numbers_dict['first'] = get_time_str(deciles[0])
-    numbers_dict['deciles'] = [get_time_str(time)
-                               for time in deciles if time != deciles[0]]
+    percentile = [i for i in range(0, 100, 10)]
+    numbers_dict['deciles'] = [(i, get_time_str(time))
+                               for i, time in zip(percentile, deciles) if time != deciles[0]]
 
     return numbers_dict
