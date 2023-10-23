@@ -17,6 +17,7 @@ To be deployed...
 
 1.  Run `python -m venv .venv`
 2.  Run `pip install -r requirements`
+3.  Run `. .venv/bin/activate/`
 
 ### Initialize SQLite database:
 
@@ -33,6 +34,7 @@ To be deployed...
 
 1.  Run `python -m venv .venv`
 2.  Run `pip install -r requirements`
+3.  Run `. .venv/bin/activate/`
 
 ### Build:
 
