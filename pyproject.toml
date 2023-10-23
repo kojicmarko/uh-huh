@@ -1,0 +1,14 @@
+[project]
+name = "uhhuh"
+version = "1.0.0"
+description = "See how you stack up in road running races."
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "numpy",
+    "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
