@@ -10,3 +10,6 @@ dist/
 build/
 *.egg-info/
 test.db
+trka.db
+event_results/
+trkadb.sql
